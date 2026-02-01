@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Design Inquiry | Golden Area Construction</title>
+  <link rel="icon" type="image/png" href="images/icons/icon.jpg">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px 25px;
+      position: relative;
+    }
+
+    /* Logo inside A4, top-right */
+    .logo {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 90px;
+      opacity: 0.9;
+    }
+
+    h1, h2 {
+      text-align: center;
+      font-weight: normal;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    textarea {
+      min-height: 140px; /* supports ~100–150 words */
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    .house-requirements {
+      margin-top: 10px;
+    }
+
+    .storey-section {
+      margin-top: 30px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .buttons button {
+      flex: 1;
+      padding: 12px;
+      font-size: 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      color: #fff;
+    }
+
+    .email {
+      background: #333;
+      color: #fff;
+    }
+
+    .terms {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container" id="formContainer">
+
+    <!-- LOGO -->
+    <img src="images/logo.png" alt="Golden Area Construction Logo" class="logo">
+
+    <h1>Golden Area Construction</h1>
+    <p style="text-align:center;">
+      Fill in the form below to request a House Plan or Design Consultation.
+    </p>
+
+    <hr>
+
+    <h2>Client Information</h2>
+
+    <label>Full Name</label>
+    <input type="text" id="name">
+
+    <label>Phone / WhatsApp</label>
+    <input type="text" id="phone">
+
+    <label>Email (optional)</label>
+    <input type="email" id="email">
+
+    <label>Location</label>
+    <input type="text" id="location">
+
+    <hr>
+
+    <h2 class="house-requirements">House Plan Specifications</h2>
+
+    <label>Type of Building</label>
+    <select id="type">
+      <option>Residential</option>
+      <option>Commercial</option>
+    </select>
+
+    <label>Number of Bedrooms</label>
+    <select id="bedrooms">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5+</option>
+    </select>
+
+    <label>Other Rooms</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" value="Kitchen"> Kitchen</label>
+      <label><input type="checkbox" value="Lounge"> Lounge</label>
+      <label><input type="checkbox" value="Dining"> Dining</label>
+      <label><input type="checkbox" value="Single Garage"> Single Garage</label>
+      <label><input type="checkbox" value="Double Garage"> Double Garage</label>
+      <label><input type="checkbox" value="General Bathroom"> General Bathroom</label>
+      <label><input type="checkbox" value="Master Bathroom"> Master Bathroom</label>
+      <label><input type="checkbox" value="Walk-in Closet"> Walk-in Closet</label>
+      <label><input type="checkbox" value="Laundry"> Laundry</label>
+    </div>
+
+    <div class="storey-section">
+      <label>Storeys</label>
+      <select id="storey">
+        <option>Single Storey</option>
+        <option>Double Storey</option>
+      </select>
+
+      <label>Roof Preference</label>
+      <select id="roof">
+        <option>Castle</option>
+        <option>Hip Valley</option>
+        <option>Butterfly</option>
+        <option>Other</option>
+      </select>
+
+      <label>Estimated Completion Date (Month)</label>
+      <select id="completion">
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <h2>Special Requirements</h2>
+    <textarea id="notes" placeholder="Describe your requirements Language: Sesotho / English"></textarea>
+
+    <hr>
+
+    <h2>Services & Terms</h2>
+    <div class="terms">
+      <p>
+        Golden Area Construction specializes in functional, cost-effective, and
+        well-planned architectural solutions. All designs are prepared with
+        quality, compliance, and future expansion in mind.
+      </p>
+      <p>
+        Submitted inquiries are reviewed professionally. Pricing is communicated
+        after evaluation of requirements, size, and complexity. Your purchase
+        will include quantified number of bricks, technical documents and 3d models.
+      
+      </p>
+      <p>
+        By submitting this inquiry, you confirm that the information provided is
+        accurate and intended for professional design consultation purposes. Claim or download 
+        our general price list.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="buttons">
+      <button class="whatsapp" onclick="sendWhatsApp()">Send via WhatsApp</button>
+      <button class="email" onclick="sendEmail()">Send via Email</button>
+      <button onclick="saveInquiry()">Save Inquiry</button>
+    </div>
+
+    <div class="footer">
+      Golden Area Construction — Design with purpose.
+    </div>
+
+  </div>
+
+  <script>
+    function collectData() {
+      const checkboxes = document.querySelectorAll('.checkbox-group input:checked');
+      let spaces = [];
+      checkboxes.forEach(cb => spaces.push(cb.value));
+
+      return `Client Name: ${document.getElementById('name').value}
+Phone: ${document.getElementById('phone').value}
+Email: ${document.getElementById('email').value}
+Location: ${document.getElementById('location').value}
+
+Building Type: ${document.getElementById('type').value}
+Bedrooms: ${document.getElementById('bedrooms').value}
+Spaces: ${spaces.join(', ')}
+Storey: ${document.getElementById('storey').value}
+Roof: ${document.getElementById('roof').value}
+Completion Month: ${document.getElementById('completion').value}
+
+Notes:
+${document.getElementById('notes').value}`;
+    }
+
+    function sendWhatsApp() {
+      const message = encodeURIComponent(collectData());
+      window.open(`https://wa.me/26658491416?text=${message}`, '_blank');
+    }
+
+    function sendEmail() {
+      const subject = encodeURIComponent("House Design Inquiry");
+      const body = encodeURIComponent(collectData());
+      window.location.href = `mailto:goldenareaconstructionls@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    function saveInquiry() {
+      const element = document.getElementById('formContainer');
+      html2pdf().from(element).set({
+        margin: 10,
+        filename: 'GoldenArea_Design_Inquiry.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      }).save();
+    }
+  </script>
+
+</body>
+</html>
