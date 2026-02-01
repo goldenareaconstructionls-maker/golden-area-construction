@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Golden Area Construction</title>
+
+<!-- Website Identity Icon -->
+<link rel="icon" type="image/png" href="images/icons/icon.jpg">
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #222;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cta {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 10px 26px;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 50px 0;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* BUTTON */
+.show-btn {
+  display: block;
+  margin: 25px auto 0;
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+
+/* CONTACT */
+.contact {
+  text-align: left;
+  max-width: 400px;
+}
+
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.socials img {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 60px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Golden Area Construction</h1>
+<p class="subtitle">Modern architectural design focused on quality living.</p>
+
+<div class="cta">
+  <a href="inquiry.html">Inquiry Form</a>
+</div>
+
+<hr>
+
+<!-- SERVICES -->
+<div class="section">
+<h2>What We Do</h2>
+<p style="text-align:center; max-width:800px; margin:auto;">
+We provide architectural design and construction-related services
+focused on functional planning, structural clarity, and long-term value.
+</p>
+<ul style="max-width:500px; margin:20px auto;">
+<li>Architectural House Plans</li>
+<li>Residential & Commercial Design</li>
+<li>Construction Documentation</li>
+<li>Project Supervision & Consulting</li>
+<li>Optional Engineering Coordination</li>
+</ul>
+</div>
+
+<hr>
+
+<!-- PROJECTS -->
+<div class="section">
+<h2>Most Popular Projects</h2>
+
+<div class="grid">
+<img src="images/r1.jpg">
+<img src="images/r2.jpg">
+<img src="images/r3.jpg">
+<img src="images/r4.jpg">
+<img src="images/r5.jpg">
+<img src="images/r6.jpg">
+<img src="images/r7.jpg">
+<img src="images/r8.jpg">
+
+<img src="images/r9.jpg" class="hidden proj-more">
+<img src="images/r10.jpg" class="hidden proj-more">
+<img src="images/r11.jpg" class="hidden proj-more">
+<img src="images/r12.jpg" class="hidden proj-more">
+<img src="images/r13.jpg" class="hidden proj-more">
+<img src="images/r14.jpg" class="hidden proj-more">
+<img src="images/r15.jpg" class="hidden proj-more">
+<img src="images/r16.jpg" class="hidden proj-more">
+</div>
+
+<button class="show-btn" onclick="toggleProjects(this)">Show more</button>
+</div>
+
+<hr>
+
+<!-- ABOUT -->
+<div class="section">
+<h2>About Us</h2>
+<p style="max-width:800px; margin:auto; text-align:center;">
+Golden Area Construction is a design-driven construction and architectural
+company committed to delivering practical, well-considered solutions.
+Our work emphasizes clarity, buildability, and respect for the client’s
+investment. We excel in custom home construction, building, aluminum 
+work, wood work and brick work initiatives. Our strength lies in delivering innovative 
+solutions suitable to clients' unique needs, setting us apart in the industry
+</p>
+
+<h3>Mission</h3>
+<p style="text-align:center; max-width:700px; margin:auto;">
+To provide reliable design and construction services that balance
+function, aesthetics, and structural integrity.
+WHY US?
+[1.] We are committed to providing value and quality in a fun 
+atmosphere that is never predictable, in addition we are one of the 
+most valued business partner of all our customers
+[2.] Golden Area Construction takes on the role of one of the 
+highest ranking designing company from small to medium 
+size projects and performs project management services.
+[3.] We also ensure that our clients objectives are our top priority. [4.] 
+Marketing strategy, we try by all means to produce an 
+amazing product at a very affordable price 
+</p>
+
+<h3>Vision</h3>
+<p style="text-align:center; max-width:700px; margin:auto;">
+To grow into a trusted name in modern construction by consistently
+delivering quality work and responsible design.
+</p>
+
+<h3>Values</h3>
+<ul style="max-width:500px; margin:20px auto;">
+<li>Quality workmanship</li>
+<li>Professional responsibility</li>
+<li>Clear communication</li>
+<li>Practical and honest design</li>
+</ul>
+</div>
+
+<hr>
+
+<!-- OLD DESIGNS -->
+<div class="section">
+<h2>Other Projects</h2>
+
+<div class="grid">
+<img src="images/old/o1.jpg">
+<img src="images/old/o2.jpg">
+<img src="images/old/o3.jpg">
+<img src="images/old/o4.jpg">
+
+<img src="images/old/o5.jpg" class="hidden old-more">
+<img src="images/old/o6.jpg" class="hidden old-more">
+<img src="images/old/o7.jpg" class="hidden old-more">
+<img src="images/old/o8.jpg" class="hidden old-more">
+</div>
+
+<button class="show-btn" onclick="toggleOld(this)">Show more</button>
+</div>
+
+<hr>
+
+<!-- DOCUMENTS -->
+<div class="section">
+<h2>Company Documents</h2>
+
+<div style="text-align:center; margin-top:25px;">
+  <a href="documents/price-list.pdf"
+     style="display:inline-block; padding:10px 26px; border:1px solid #000; text-decoration:none; color:#000; font-size:14px;"
+     download>
+     Download Price List
+  </a>
+
+  <br><br>
+
+  <a href="documents/company-profile.pdf"
+     style="display:inline-block; padding:10px 26px; border:1px solid #000; text-decoration:none; color:#000; font-size:14px;"
+     download>
+     Download Company Profile
+  </a>
+</div>
+</div>
+
+<hr>
+
+<!-- CONTACT -->
+<div class="section contact">
+<h2>Contact Us</h2>
+<p>📞 Call: +266 5849 1416 / +266 6326 7923</p>
+
+<div class="socials">
+  <a href="https://wa.me/26658491416" target="_blank">
+    <img src="images/icons/whatsapp.png">WhatsApp
+  </a>
+
+  <a href="https://www.facebook.com/profile.php?id=100076217662503" target="_blank">
+    <img src="images/icons/facebook.png">Facebook
+  </a>
+
+  <a href="https://www.instagram.com/golden_area_construction?igsh=MXJvdnN3Z3hlZjg1cg==" target="_blank">
+    <img src="images/icons/instagram.png">Instagram
+  </a>
+
+  <a href="https://www.tiktok.com/@goldenareaconstruction" target="_blank">
+    <img src="images/icons/tiktok.png">TikTok
+  </a>
+</div>
+</div>
+
+<div class="footer">
+© Golden Area Construction — All Rights Reserved
+</div>
+
+</div>
+
+<script>
+function toggleProjects(btn) {
+  const items = document.querySelectorAll('.proj-more');
+  const hidden = items[0].classList.contains('hidden');
+
+  items.forEach(el => el.classList.toggle('hidden'));
+  btn.textContent = hidden ? 'Show less' : 'Show more';
+}
+
+function toggleOld(btn) {
+  const items = document.querySelectorAll('.old-more');
+  const hidden = items[0].classList.contains('hidden');
+
+  items.forEach(el => el.classList.toggle('hidden'));
+  btn.textContent = hidden ? 'Show less' : 'Show more';
+}
+</script>
+
+</body>
+</html>
